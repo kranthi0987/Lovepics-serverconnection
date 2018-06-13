@@ -1,5 +1,7 @@
 package com.sanjay.lovepics;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -10,8 +12,10 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.jsibbold.zoomage.ZoomageView;
 
+import java.io.File;
+
 /**
- * Created by User on 1/9/2018.
+ * Created by User on s1/9/2018.
  */
 
 public class DetailActivity extends AppCompatActivity {
@@ -45,6 +49,12 @@ public class DetailActivity extends AppCompatActivity {
 
 
     }
-
+    private void galleryAddPic(String imagePath) {
+        Intent mediaScanIntent = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
+        File f = new File(imagePath);
+        Uri contentUri = Uri.fromFile(f);
+        mediaScanIntent.setData(contentUri);
+        sendBroadcast(mediaScanIntent);
+    }
 }
 

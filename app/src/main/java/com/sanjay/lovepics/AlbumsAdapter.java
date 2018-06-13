@@ -21,7 +21,7 @@ import com.squareup.picasso.Picasso;
 import java.util.List;
 
 /**
- * Created by User on 1/9/2018.
+ * Created by User on s1/9/2018.
  */
 
 public class AlbumsAdapter extends RecyclerView.Adapter<AlbumsAdapter.MyViewHolder> {
@@ -62,7 +62,7 @@ public class AlbumsAdapter extends RecyclerView.Adapter<AlbumsAdapter.MyViewHold
     }
 
     /**
-     * Showing popup menu when tapping on 3 dots
+     * Showing popup menu when tapping on s3 dots
      */
     private void showPopupMenu(View view) {
         // inflate menu

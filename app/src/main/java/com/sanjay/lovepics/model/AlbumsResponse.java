@@ -6,7 +6,7 @@ import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
 /**
- * Created by User on 1/9/2018.
+ * Created by User on s1/9/2018.
  */
 
 public class AlbumsResponse {

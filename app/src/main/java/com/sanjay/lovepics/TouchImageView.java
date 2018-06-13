@@ -43,7 +43,7 @@ public class TouchImageView extends ImageView {
     private static final float SUPER_MAX_MULTIPLIER = 1.25f;
 
     //
-    // Scale of image ranges from minScale to maxScale, where minScale == 1
+    // Scale of image ranges from minScale to maxScale, where minScale == s1
     // when the image is stretched to fit view.
     //
     private float normalizedScale;
@@ -293,7 +293,7 @@ public class TouchImageView extends ImageView {
     }
 
     /**
-     * Set the max zoom multiplier. Default value: 3.
+     * Set the max zoom multiplier. Default value: s3.
      * @param max max zoom multiplier.
      */
     public void setMaxZoom(float max) {
@@ -319,7 +319,7 @@ public class TouchImageView extends ImageView {
     }
 
     /**
-     * Set the min zoom multiplier. Default value: 1.
+     * Set the min zoom multiplier. Default value: s1.
      * @param min min zoom multiplier.
      */
     public void setMinZoom(float min) {
@@ -345,9 +345,9 @@ public class TouchImageView extends ImageView {
 
     /**
      * Set zoom to the specified scale. Image will be centered around the point
-     * (focusX, focusY). These floats range from 0 to 1 and denote the focus point
+     * (focusX, focusY). These floats range from 0 to s1 and denote the focus point
      * as a fraction from the left and top of the view. For example, the top left
-     * corner of the image would be (0, 0). And the bottom right corner would be (1, 1).
+     * corner of the image would be (0, 0). And the bottom right corner would be (s1, s1).
      * @param scale
      * @param focusX
      * @param focusY
@@ -358,9 +358,9 @@ public class TouchImageView extends ImageView {
 
     /**
      * Set zoom to the specified scale. Image will be centered around the point
-     * (focusX, focusY). These floats range from 0 to 1 and denote the focus point
+     * (focusX, focusY). These floats range from 0 to s1 and denote the focus point
      * as a fraction from the left and top of the view. For example, the top left
-     * corner of the image would be (0, 0). And the bottom right corner would be (1, 1).
+     * corner of the image would be (0, 0). And the bottom right corner would be (s1, s1).
      * @param scale
      * @param focusX
      * @param focusY
@@ -402,9 +402,9 @@ public class TouchImageView extends ImageView {
 
     /**
      * Return the point at the center of the zoomed image. The PointF coordinates range
-     * in value between 0 and 1 and the focus point is denoted as a fraction from the left
+     * in value between 0 and s1 and the focus point is denoted as a fraction from the left
      * and top of the view. For example, the top left corner of the image would be (0, 0).
-     * And the bottom right corner would be (1, 1).
+     * And the bottom right corner would be (s1, s1).
      * @return PointF representing the scroll position of the zoomed image.
      */
     public PointF getScrollPosition() {
@@ -423,7 +423,7 @@ public class TouchImageView extends ImageView {
 
     /**
      * Set the focus point of the zoomed image. The focus points are denoted as a fraction from the
-     * left and top of the view. The focus points can range in value between 0 and 1.
+     * left and top of the view. The focus points can range in value between 0 and s1.
      * @param focusX
      * @param focusY
      */
@@ -531,7 +531,7 @@ public class TouchImageView extends ImageView {
     }
 
     /**
-     * If the normalizedScale is equal to 1, then the image is made to fit the screen. Otherwise,
+     * If the normalizedScale is equal to s1, then the image is made to fit the screen. Otherwise,
      * it is made to fit the screen according to the dimensions of the previous image matrix. This
      * allows the image to maintain its zoom after rotation.
      */

@@ -4,7 +4,7 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * Created by User on 1/9/2018.
+ * Created by User on s1/9/2018.
  */
 
 public class Album {

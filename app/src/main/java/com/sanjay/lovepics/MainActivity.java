@@ -32,8 +32,9 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+
 /**
- * Created by User on 1/9/2018.
+ * Created by User on s1/9/2018.
  */
 
 public class MainActivity extends AppCompatActivity {
@@ -50,16 +51,31 @@ SwipeRefreshLayout mSwipeRefreshLayout;
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        initViews();
+        initCollapsingToolbar();
         mSwipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swiperefresh);
         mSwipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
                                                      @Override
                                                      public void onRefresh() {
                                                          refreshContent();
                                                      }});
-        initViews();
-        initCollapsingToolbar();
 
+
+//        BannerSlider bannerSlider = (BannerSlider) findViewById(R.id.banner_slider1);
+//        List<Banner> banners=new ArrayList<>();
+//        //add banner using image url
+////        banners.add(new RemoteBanner("Put banner image url here ..."));
+//        //add banner using resource drawable
+//        banners.add(new DrawableBanner(R.drawable.s1));
+//        banners.add(new DrawableBanner(R.drawable.s2));
+//        banners.add(new DrawableBanner(R.drawable.s3));
+//        banners.add(new DrawableBanner(R.drawable.s4));
+//        banners.add(new DrawableBanner(R.drawable.s5));
+//        bannerSlider.setBanners(banners);
     }
+
+
+
     private void refreshContent(){
         new Handler().postDelayed(new Runnable() {
                                       @Override
@@ -124,7 +140,7 @@ SwipeRefreshLayout mSwipeRefreshLayout;
 
             if (includeEdge) {
                 outRect.left = spacing - column * spacing / spanCount; // spacing - column * ((1f / spanCount) * spacing)
-                outRect.right = (column + 1) * spacing / spanCount; // (column + 1) * ((1f / spanCount) * spacing)
+                outRect.right = (column + 1) * spacing / spanCount; // (column + s1) * ((1f / spanCount) * spacing)
 
                 if (position < spanCount) { // top edge
                     outRect.top = spacing;
@@ -132,7 +148,7 @@ SwipeRefreshLayout mSwipeRefreshLayout;
                 outRect.bottom = spacing; // item bottom
             } else {
                 outRect.left = column * spacing / spanCount; // column * ((1f / spanCount) * spacing)
-                outRect.right = spacing - (column + 1) * spacing / spanCount; // spacing - (column + 1) * ((1f /    spanCount) * spacing)
+                outRect.right = spacing - (column + 1) * spacing / spanCount; // spacing - (column + s1) * ((1f /    spanCount) * spacing)
                 if (position >= spanCount) {
                     outRect.top = spacing; // item top
                 }
